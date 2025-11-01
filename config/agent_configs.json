@@ -1,0 +1,28 @@
+{
+  "ai_threat_hunter": {
+    "description": "Proactively hunts for threats using AI-generated hypotheses",
+    "enabled": true,
+    "hunting_schedule": "0 8 * * *",
+    "max_hypotheses_per_day": 10
+  },
+  "autonomous_threat_responder": {
+    "confidence_threshold": 0.85,
+    "description": "Automatically detects and responds to security threats",
+    "enabled": true,
+    "max_response_time_seconds": 30,
+    "permissions": [
+      "isolate_endpoints",
+      "block_ips",
+      "create_tickets"
+    ]
+  },
+  "security_analyst_ai": {
+    "description": "Supports human analysts during investigations",
+    "enabled": true,
+    "tools": [
+      "incident_analysis",
+      "ioc_enrichment",
+      "report_generation"
+    ]
+  }
+}

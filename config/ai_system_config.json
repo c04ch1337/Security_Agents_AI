@@ -1,0 +1,38 @@
+{
+  "agents": {
+    "autonomous_threshold": 0.8,
+    "learning_enabled": true,
+    "max_decisions_per_minute": 20,
+    "reasoning": "Maintain human oversight while allowing improvement"
+  },
+  "ai_system": {
+    "memory_system": {
+      "long_term": "supabase",
+      "reasoning": "Hybrid approach balances latency and persistence",
+      "short_term": "in_memory",
+      "vector_store": "chromadb"
+    },
+    "openrouter": {
+      "default_model": "anthropic/claude-3-sonnet",
+      "description": "Access multiple AI models via OpenRouter",
+      "fallback_models": [
+        "anthropic/claude-3-haiku",
+        "openai/gpt-3.5-turbo"
+      ],
+      "reasoning": "Use powerful models for analysis and cheaper ones for utility tasks"
+    }
+  },
+  "created_date": "2025-11-01 00:06:43",
+  "security_workflows": {
+    "incident_response": {
+      "auto_containment": true,
+      "auto_investigation": true,
+      "human_escalation": "high_severity"
+    },
+    "threat_hunting": {
+      "auto_hypothesis_generation": true,
+      "hunting_schedule": "daily"
+    }
+  },
+  "version": "1.0.0"
+}
